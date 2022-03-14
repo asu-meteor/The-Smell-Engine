@@ -1,0 +1,3 @@
+numpy
+quantities>=0.12
+typer

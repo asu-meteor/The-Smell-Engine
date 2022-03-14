@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to The Smell Engine’s documentation! &mdash; The Smell Engine 1.0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> The Smell Engine
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to The Smell Engine’s documentation!</a><ul>
+<li><a class="reference internal" href="#about">About</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-olfactometer.smell_engine">Smell Engine</a></li>
+<li><a class="reference internal" href="#odorant-molecules-pubchem">Odorant Molecules (PubChem)</a></li>
+<li><a class="reference internal" href="#module-olfactometer.smell_controller">Smell Controller</a></li>
+<li><a class="reference internal" href="#module-olfactometer.valve_driver">Valve Driver</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">The Smell Engine</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>Welcome to The Smell Engine’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="welcome-to-the-smell-engine-s-documentation">
+<h1>Welcome to The Smell Engine’s documentation!<a class="headerlink" href="#welcome-to-the-smell-engine-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<p>The Smell Engine is a python framework for controlling an olfactometer to generate odors. See paper for more detail: [link to paper]</p>
+</div>
+</div>
+<div class="section" id="module-olfactometer.smell_engine">
+<span id="smell-engine"></span><h1>Smell Engine<a class="headerlink" href="#module-olfactometer.smell_engine" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="olfactometer.smell_engine.SmellEngine">
+<em class="property">class </em><code class="sig-prename descclassname">olfactometer.smell_engine.</code><code class="sig-name descname">SmellEngine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">total_flow_rate</span><span class="o">=</span><span class="default_value">4000</span></em>, <em class="sig-param"><span class="n">n_odorants</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">data_container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug_mode</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">write_flag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">PID_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">look_up_table_path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">oms</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.add_molecule_id">
+<code class="sig-name descname">add_molecule_id</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.add_molecule_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add Odorant Molecule to system</p>
+<dl class="py attribute">
+<dt id="olfactometer.smell_engine.SmellEngine.id">
+<code class="sig-name descname">id</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>int values uniquely identifying OM</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.append">
+<code class="sig-name descname">append</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.append" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.automation_set_mfc_setpoints">
+<code class="sig-name descname">automation_set_mfc_setpoints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mfc_setpoints</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.automation_set_mfc_setpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override mfc setpoints in order B, A, C</p>
+<dl class="py attribute">
+<dt id="olfactometer.smell_engine.SmellEngine.ids">
+<code class="sig-name descname">ids</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List[] specifying each MFCs flow rate relative to its max.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.calculate_target_achieved_error">
+<code class="sig-name descname">calculate_target_achieved_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.calculate_target_achieved_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.close_smell_engine">
+<code class="sig-name descname">close_smell_engine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.close_smell_engine" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.get_desired_concentrations">
+<code class="sig-name descname">get_desired_concentrations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.get_desired_concentrations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.get_mfc_setpoints">
+<code class="sig-name descname">get_mfc_setpoints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.get_mfc_setpoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.get_molecular_ids">
+<code class="sig-name descname">get_molecular_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.get_molecular_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.get_valve_duty_cycles">
+<code class="sig-name descname">get_valve_duty_cycles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.get_valve_duty_cycles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.initialize_equipment">
+<code class="sig-name descname">initialize_equipment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.initialize_equipment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configure olfactometer equipment via Smell Composer component(s).
+First we specify molecules by CID number and define their vapor
+pressure, densities, and solution.
+Instantiate the olfactometer.
+Determines the jars and dilutions required to achieve the target
+specified per molecule.
+Perform optimization to configure olfactometer
+Format values for ValveDriver to execute.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.initialize_olfactometer">
+<code class="sig-name descname">initialize_olfactometer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.initialize_olfactometer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize Smell Driver instance which instantiates a
+ValveDriver instance.
+This instance is then assigned to the Smell Composer so the
+communication line of
+odorant mixtures is established.</p>
+<dl class="py attribute">
+<dt id="olfactometer.smell_engine.SmellEngine.debug_mode">
+<code class="sig-name descname">debug_mode</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.debug_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag denoting physical vs simulated hardware.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.initialize_smell_engine_system">
+<code class="sig-name descname">initialize_smell_engine_system</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">with_nidaq</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.initialize_smell_engine_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Presumes user has manually set OM ids before initializing
+system pipeline</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.om_dilutions">
+<em class="property">property </em><code class="sig-name descname">om_dilutions</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.om_dilutions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.om_ids">
+<em class="property">property </em><code class="sig-name descname">om_ids</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.om_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.print_data_binary">
+<code class="sig-name descname">print_data_binary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">concentration</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.print_data_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>A debug method for printing binary representations of concentrations (digital states of olfactometer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>concentration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – List of concentration states.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_desired_concentrations">
+<code class="sig-name descname">set_desired_concentrations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">concentrations</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_desired_concentrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads and writes concentration values to Smell Engine and Valve Driver</p>
+<dl class="py attribute">
+<dt id="olfactometer.smell_engine.SmellEngine.concentrations">
+<code class="sig-name descname">concentrations</code><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.concentrations" title="Permalink to this definition">¶</a></dt>
+<dd><p>List containing concentration values</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_mfc_setpoints">
+<code class="sig-name descname">set_mfc_setpoints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mfc_setpoints</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_mfc_setpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override mfc setpoints</p>
+<dl class="py attribute">
+<dt id="id0">
+<code class="sig-name descname">ids</code><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
+<dd><p>mfc setpoints</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_odorant_molecule_dilutions">
+<code class="sig-name descname">set_odorant_molecule_dilutions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dilutions</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_odorant_molecule_dilutions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign PubChemID’s on startup to the Valve Driver cid’s.</p>
+<dl class="py attribute">
+<dt id="id1">
+<code class="sig-name descname">ids</code><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
+<dd><p>List containing uniquely identifiable int values of OM ids</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_odorant_molecule_ids">
+<code class="sig-name descname">set_odorant_molecule_ids</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_odorant_molecule_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign PubChemID’s on startup to the Valve Driver cid’s.</p>
+<dl class="py attribute">
+<dt id="id2">
+<code class="sig-name descname">ids</code><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<dd><p>List containing uniquely identifiable int values of OM ids</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_olfactometer_target_outflow">
+<code class="sig-name descname">set_olfactometer_target_outflow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m_flowrate</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_olfactometer_target_outflow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_starting_concentration">
+<code class="sig-name descname">set_starting_concentration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">starting_vector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_starting_concentration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_engine.SmellEngine.set_valve_duty_cycles">
+<code class="sig-name descname">set_valve_duty_cycles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valves</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_engine.SmellEngine.set_valve_duty_cycles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override valve duty cycles for system tests.</p>
+<dl class="py attribute">
+<dt id="id3">
+<code class="sig-name descname">ids</code><a class="headerlink" href="#id3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Valve states</p>
+</dd></dl>
+
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="odorant-molecules-pubchem">
+<h1>Odorant Molecules (PubChem)<a class="headerlink" href="#odorant-molecules-pubchem" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-olfactometer.odorants"></span><p>Classes for odorants, mixtures, chemical orders, etc.</p>
+<dl class="py class">
+<dt id="olfactometer.odorants.Molecule">
+<em class="property">class </em><code class="sig-prename descclassname">olfactometer.odorants.</code><code class="sig-name descname">Molecule</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">fill</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vapor_press</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dens</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This module extracts various chemical and physical properties of odorous molecular compounds
+using PUG REST API. Portions of the codebase have benefitted from work by Maxim Shevelev &lt;<a class="reference external" href="mailto:mdshev7&#37;&#52;&#48;gmail&#46;com">mdshev7<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
+<p>For details about PubChem’s PUG REST API please visit
+<a class="reference external" href="https://pubchem.ncbi.nlm.nih.gov/pug_rest/PUG_REST.html">https://pubchem.ncbi.nlm.nih.gov/pug_rest/PUG_REST.html</a></p>
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.fill_details">
+<code class="sig-name descname">fill_details</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.fill_details" title="Permalink to this definition">¶</a></dt>
+<dd><p>Populate odorant molecule properties to include molecular weight and cid/name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.get_addtional_om_props">
+<code class="sig-name descname">get_addtional_om_props</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">required_properties</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.get_addtional_om_props" title="Permalink to this definition">¶</a></dt>
+<dd><p>Found method as courtesy of Maxim Shevelev (Github: &#64;mawansui)
+1. Accepts the compound name
+2. Gets the CID for this compound
+3. Searches PubChem for data for the specified CID
+4. Cycles through the fetched data to select required fields
+5. Returns a dictionary with specified properties of specified compound</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.get_cid_by_name">
+<code class="sig-name descname">get_cid_by_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">compound_name</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.get_cid_by_name" title="Permalink to this definition">¶</a></dt>
+<dd><ol class="arabic simple">
+<li><p>Accepts the compound name</p></li>
+<li><p>Searches PubChem by this name</p></li>
+<li><p>Returns the compound’s PubChem CID</p></li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.get_cid_from_api">
+<code class="sig-name descname">get_cid_from_api</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.get_cid_from_api" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain pub chem ID from OM name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.get_density">
+<code class="sig-name descname">get_density</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.get_density" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain odorant molecule density by searching density property and extra additional properties from PubChem.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.get_vapor_pressure">
+<code class="sig-name descname">get_vapor_pressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.get_vapor_pressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtain odorant molecule Vapor Pressure from PubChem.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.odorants.Molecule.pubchem_parsing">
+<code class="sig-name descname">pubchem_parsing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">url</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.odorants.Molecule.pubchem_parsing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the link to PubChem API, parse it for JSON and then translate that
+to Python dictionary;
+This is just to follow the DRY principle</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-olfactometer.smell_controller">
+<span id="smell-controller"></span><h1>Smell Controller<a class="headerlink" href="#module-olfactometer.smell_controller" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="olfactometer.smell_controller.SmellController">
+<em class="property">class </em><code class="sig-prename descclassname">olfactometer.smell_controller.</code><code class="sig-name descname">SmellController</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">olfactometer</span></em>, <em class="sig-param"><span class="n">data_container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">valve_driver</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kdtree_flag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">kdtree</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smell_data_frame</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.calc_conc">
+<em class="property">classmethod </em><code class="sig-name descname">calc_conc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">variables</span></em>, <em class="sig-param"><span class="n">n_jars</span></em>, <em class="sig-param"><span class="n">max_flow_rates</span></em>, <em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.calc_conc" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is invoked externally to calculate concentration given olfactometer configuration
+variables: MUST BE np.array!  Contains olfactometer mfc values and valve duty cycles
+n_jars: assigneed from class instance
+max_flow_rates: assigneed from class instance
+A: Gas Phase Concentration of jars x odorants</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.clean_valve_mfc_values">
+<code class="sig-name descname">clean_valve_mfc_values</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">print_flow_rates</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.clean_valve_mfc_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert dictionary that looks like:
+{‘w1MFC_A_High’: 0.8840516038671588,
+‘w2MFC_A_High’: 0,
+‘w1MFC_B_Low’: 0.11551628411711523,
+‘w2MFC_B_Low’: 0,
+‘fMFC_A_High’: array(1.9601) * cc/min,
+‘fMFC_B_Low’: array(0.01) * cc/min,
+‘MFC_Carrier’: array(2198.0299) * cc/min}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.find_odorant_id_by_index">
+<code class="sig-name descname">find_odorant_id_by_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m_index</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.find_odorant_id_by_index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.get_max_flow_rates">
+<code class="sig-name descname">get_max_flow_rates</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.get_max_flow_rates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.get_vapor_concs_dense">
+<code class="sig-name descname">get_vapor_concs_dense</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_odorants</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.get_vapor_concs_dense" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.kdtree_lookup">
+<code class="sig-name descname">kdtree_lookup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_dense</span></em>, <em class="sig-param"><span class="n">mfc_names</span></em>, <em class="sig-param"><span class="n">F</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.kdtree_lookup" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.lls_olfactometer_scheduler">
+<code class="sig-name descname">lls_olfactometer_scheduler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vapor_concs_dense</span></em>, <em class="sig-param"><span class="n">target_outflow_rate_ccm</span></em>, <em class="sig-param"><span class="n">target_dense</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.lls_olfactometer_scheduler" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.max_outflow_rate">
+<em class="property">property </em><code class="sig-name descname">max_outflow_rate</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.max_outflow_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum possible flow rate if all connected-in-parallel MFCs are
+at their maximum flow rates</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.mfc_flow_rates_to_voltages">
+<code class="sig-name descname">mfc_flow_rates_to_voltages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.mfc_flow_rates_to_voltages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.olfactometer_schedule">
+<em class="property">property </em><code class="sig-name descname">olfactometer_schedule</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.olfactometer_schedule" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.optimization_report">
+<code class="sig-name descname">optimization_report</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.optimization_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Report on optimization quality</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.optimize">
+<code class="sig-name descname">optimize</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">target_outflow_concs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">target_outflow_rate</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">report</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the valve duty cycles and MFC settings that bring this route
+closest to target. This will be done by varying actual valve positions
+and flow rates, so it should only be done on a virtual olfactometer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.outflow_fractions">
+<em class="property">property </em><code class="sig-name descname">outflow_fractions</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.outflow_fractions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.outflow_rates">
+<em class="property">property </em><code class="sig-name descname">outflow_rates</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.outflow_rates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.residuals">
+<em class="property">classmethod </em><code class="sig-name descname">residuals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">variables</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">n_jars</span></em>, <em class="sig-param"><span class="n">max_flow_rates</span></em>, <em class="sig-param"><span class="n">total_vapor</span></em>, <em class="sig-param"><span class="n">fixed_A</span></em>, <em class="sig-param"><span class="n">fixed_B</span></em>, <em class="sig-param"><span class="n">alpha</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.residuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is invoked by the non-linear least squares solver.
+wNA: The fraction of time that valve N is in state A
+wNB: The fraction of the remaining time that valve N is in state B
+fA: The flow rate through MFC A
+fB: The flow rate through MFC B</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.target_outflow">
+<em class="property">property </em><code class="sig-name descname">target_outflow</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.target_outflow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.target_outflow_concs">
+<em class="property">property </em><code class="sig-name descname">target_outflow_concs</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.target_outflow_concs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.target_outflow_rate">
+<em class="property">property </em><code class="sig-name descname">target_outflow_rate</code><a class="headerlink" href="#olfactometer.smell_controller.SmellController.target_outflow_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.update_target">
+<code class="sig-name descname">update_target</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">report</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.update_target" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executed externally, ideally through the SmellEngineCommunicator class.
+This method takes the assigned target concentrations and flow rate then message
+passes target states through the Smell Engine pipeline.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.smell_controller.SmellController.update_target_from_logical">
+<code class="sig-name descname">update_target_from_logical</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.SmellController.update_target_from_logical" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="olfactometer.smell_controller.calc_conc_jit">
+<code class="sig-prename descclassname">olfactometer.smell_controller.</code><code class="sig-name descname">calc_conc_jit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">variables</span></em>, <em class="sig-param"><span class="n">n_jars</span></em>, <em class="sig-param"><span class="n">max_flow_rates</span></em>, <em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.smell_controller.calc_conc_jit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-olfactometer.valve_driver">
+<span id="valve-driver"></span><h1>Valve Driver<a class="headerlink" href="#module-olfactometer.valve_driver" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="olfactometer.valve_driver.ValveDriver">
+<em class="property">class </em><code class="sig-prename descclassname">olfactometer.valve_driver.</code><code class="sig-name descname">ValveDriver</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">olfactometer</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">data_container</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">debug_mode</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">PID_mode</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ValveDriver is responsible for interfacing with NI-DAQmx hardware using the nidaqmx API.
+Provides continuous virtual communication lines with MFCs (analog) and olfactometer valves (digital).</p>
+<dl class="py attribute">
+<dt id="olfactometer.valve_driver.ValveDriver.olf">
+<code class="sig-name descname">olf</code><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.olf" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of mfc voltage values indexed accurately.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="olfactometer.valve_driver.ValveDriver.cids">
+<code class="sig-name descname">cids</code><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.cids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A ordered list of concentration ids for each valve.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.abort">
+<code class="sig-name descname">abort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets NI-DAQmx device to initialized state.
+All prior tasks and defined channel lines are aborted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.close_tasks">
+<code class="sig-name descname">close_tasks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.close_tasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes all created/open NIDAQ tasks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.convert_concentration_format">
+<code class="sig-name descname">convert_concentration_format</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data_input</span></em>, <em class="sig-param"><span class="n">debug</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.convert_concentration_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in a list of concentrations, convert each individual concentration
+A/B/off state into a sequence of binary control signals for olfactometer.
+:param d_in:
+:type d_in: <cite>list</cite> of `</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of 5 concentration values and there states in A/B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.format_bits">
+<code class="sig-name descname">format_bits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valve_index</span></em>, <em class="sig-param"><span class="n">state</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.format_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Each valve state is identified by A, B, None. The valve state is represented as a 32 bit unsigned integer.
+If state A, first 16 bits are used to configure digital state of olfactometer.
+If state B, last 16 bits are used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>valve_index</strong> (<em>int</em>) – Integer indexing of valve state (non-zero).</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – A,B,None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Binary representation of olfactometer state.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>uint32</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>Exception</strong> – Invalid state requested.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.generate_analog_frame_writes">
+<code class="sig-name descname">generate_analog_frame_writes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">analog_states</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.generate_analog_frame_writes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates list of analog states to be written to MFCs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analog_states</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dictionary</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">(int,</span> <span class="pre">float)</span></code>) – A index identifier for MFC and the requested voltage values supplied.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of voltage values per MFC.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.generate_digital_frame_writes">
+<code class="sig-name descname">generate_digital_frame_writes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valve_durations</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.generate_digital_frame_writes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create list (of size samples_per_frame) to populate with 32 bit values representative
+of the digital states for each valve.</p>
+<p>To turn a respective valve on, it’s index location within first 16 bits of a 32-bit write must be set to high.
+To turn a respective valve off, it’s index location within last 16 bits of a 32-bit write must be set to high.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>valve_durations</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dictionary</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">(int,</span> <span class="pre">float)</span></code>) – Dictionary of valve indexes and their respective states (time in ms for A,B,off).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Writes will be written to olfactometer as multiline/channel write.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">uint32</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.init_analog_in_task">
+<code class="sig-name descname">init_analog_in_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_samples</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">task_name</span><span class="o">=</span><span class="default_value">'Analog_In'</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="o">=</span><span class="default_value">'analog_in_channel'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.init_analog_in_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializing an Analog Input Task to read samples from the specified channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_samples</strong> (<em>int</em>) – Specify # of samples per channel, default is 50</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – Task name, used for uniquely identifying task instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success/error status represented with 1/-1.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>nidaqmx.DaqError</strong> – An error occured when trying to add an analog voltage virtual communication channel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.init_analog_task">
+<code class="sig-name descname">init_analog_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mfc_flat_list</span></em>, <em class="sig-param"><span class="n">task_name</span><span class="o">=</span><span class="default_value">'Analog_Task'</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="o">=</span><span class="default_value">'analog_channel'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.init_analog_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializing an Analog Output Task and Channel communication line.
+List of analog channels [0:3] along with voltage rates are initialized via nidaqmx API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mfc_flat_list</strong> – A 1D list containing analog channels and voltages.</p></li>
+<li><p><strong>task_name</strong> (<em>str</em>) – Task name, used for uniquely identifying task instance.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success/error status represented with 1/-1.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>nidaqmx.DaqError</strong> – An error occured when trying to add an analog voltage virtual communication channel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.init_digital_task">
+<code class="sig-name descname">init_digital_task</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task_name</span><span class="o">=</span><span class="default_value">'DigitalTask'</span></em>, <em class="sig-param"><span class="n">channel_name</span><span class="o">=</span><span class="default_value">'digital_channel'</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.init_digital_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create task object with digital out on port0.
+Configure task to use 1 channel for all liens of communication.
+Append to list of tasks and update state of olfactometer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task_name</strong> (<em>str</em>) – Task name, used for uniquely identifying task instance.</p></li>
+<li><p><strong>channel_name</strong> (<em>str</em>) – Channel name, used for unuquely identifying different channel comm lines.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success/error status represented with 1/-1.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>nidaqmx.DaqError</strong> – An error occured when trying to add an analog voltage virtual communication channel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reading and saving device information from NI-DAQmx hardware.
+Existing device references and tasks are reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Success/error status.</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>nidaqmx.DaqError</strong> – An error occurred when attempting to read NIDAQ hardware information.</p></li>
+<li><p><strong>Error codes can be found in the nidaqmx errors.py system file.</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.issue_odorants">
+<code class="sig-name descname">issue_odorants</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valve_mfc_values</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.issue_odorants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executed externally to update olfactometer schedule of odor samples,
+this method converts the olfactometer schedule into digital and analog control signals.
+Olfactometer Schedule Examples:
+{‘valves’:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>[</dt><dd><p>(Valve Number, time in state A, time in state B)
+(1, 0.6523873263385962, 0.3433522990024116),
+(2, 0.6523929695332448, 0.34373085569547107)</p>
+</dd>
+<dt>], ‘mfcs’:</dt><dd><p>{MyMediumMFC: MFC_A_High (1.0 L/min): array(value) * V,
+MyLowMFC: MFC_B_Low (10.0 cc/min): array(value) * V,
+MyHighMFC: MFC_Carrier (10.0 L/min): array(values) * V}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>valve_mfc_values</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">dictionary</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">(str,</span> <span class="pre">float)</span></code>) – Expected dictionary of mfc voltages and valve state durations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.print_data_binary">
+<code class="sig-name descname">print_data_binary</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">concentration</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.print_data_binary" title="Permalink to this definition">¶</a></dt>
+<dd><p>A debug method for printing binary representations of concentrations (digital states of olfactometer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>concentration</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>) – List of concentration states.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.set_mfc_setpoints">
+<code class="sig-name descname">set_mfc_setpoints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">setpoints</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.set_mfc_setpoints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle override for analog mfc setpoints and assign user defined setpoints</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>setpoints</strong> – List containing voltage values per mfc</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.set_task_clock">
+<code class="sig-name descname">set_task_clock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">task</span></em>, <em class="sig-param"><span class="n">samples_per_frame</span><span class="o">=</span><span class="default_value">50</span></em>, <em class="sig-param"><span class="n">frames_per_s</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">repeats</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.set_task_clock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets rate, number of samples, and source of the Sample Clock for developer-specified task.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>task</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">nidaqmx.task.Task</span></code>) – Task object to which sample clock is being configured for.</p></li>
+<li><p><strong>samples_per_frame</strong> (<em>int</em>) – Samples generated per frame.</p></li>
+<li><p><strong>frames_per_s</strong> (<em>int</em>) – Frames per second for sampling.</p></li>
+<li><p><strong>repeats</strong> (<em>int</em><em>, </em><em>optional</em>) – Duplicating samples across each channel.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.set_valve_states">
+<code class="sig-name descname">set_valve_states</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valve_states</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.set_valve_states" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle overrides for digital valve states and assign user-defined valve states</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>valve_states</strong> – A list of tuples containing high/low toggles for valve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.specify_analog_frame_writes">
+<code class="sig-name descname">specify_analog_frame_writes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">analog_states</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.specify_analog_frame_writes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide a defined list of analog states to be written to MFCs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>analog_states</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">(float,</span> <span class="pre">int)</span></code>) – A index identifier for MFC and the requested voltage values supplied.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of voltage values per MFC.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>(<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code> of <code class="xref py py-obj docutils literal notranslate"><span class="pre">float</span></code>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.specify_digital_frame_writes">
+<code class="sig-name descname">specify_digital_frame_writes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">valve_states</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.specify_digital_frame_writes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given valve states, samples are generated with half containing given valve state other half being off</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>valve_states</strong> (<code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code>) – List of tuples representing A,B states for each valve</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_pause">
+<code class="sig-name descname">timer_pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Halts thread instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_resume">
+<code class="sig-name descname">timer_resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Continues thread after being paused.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_run">
+<code class="sig-name descname">timer_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ‘update’ method for the thread instance. Writes digital valve states
+to olfactometer at the defined timer_interval rate.
+If writing values is unsuccessfull thread instance halts.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_setup">
+<code class="sig-name descname">timer_setup</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">interval</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration of thread instance.
+Thread runs at a user-defined time interval to which it issues commands to hardware.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>interval</strong> (<em>float</em>) – Rate at which thread executs write commands to olfactometer.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_start">
+<code class="sig-name descname">timer_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts thread instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.timer_stop">
+<code class="sig-name descname">timer_stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.timer_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses thread, turns off all valve, ends defined virtual communication,
+and releases Task object instance from memory.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.write_output">
+<code class="sig-name descname">write_output</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">digital_values</span></em>, <em class="sig-param"><span class="n">analog_values</span><span class="o">=</span><span class="default_value">[]</span></em><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.write_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will write a list of valve commands to olfactometer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Success/error message. 0 success, -1 error.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="olfactometer.valve_driver.ValveDriver.write_zeroes">
+<code class="sig-name descname">write_zeroes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#olfactometer.valve_driver.ValveDriver.write_zeroes" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will write a list of valve commands to olfactometer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A list of 5 concentration values and there states in A/B.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Alireza Bahremand, Mason Manetta, Jessica Lai, Robert LiKamWa, Richard C Gerkin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
