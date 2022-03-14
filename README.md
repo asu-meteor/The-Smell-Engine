@@ -1,5 +1,5 @@
 # Smell Engine
-The Smell Engine is a system for designing virtual odor-infused environments and generating olfactory stimuli within the virtual environment by controlling an olfactory display. More info can be found in the paper here [Paper Link](https://meteor.ame.asu.edu/publications/SmellEngineIEEEVRR22.pdf)
+The Smell Engine is a system for designing virtual odor-infused environments and generating olfactory stimuli within the virtual environment by controlling an olfactory display. More info can be found [here](https://meteor.ame.asu.edu/projects/smell-engine/)
 
 This system can be run as a CLI or Virtual Reality (VR) experience. 
 To run as a CLI interface, the notebooks provide documented examples.
@@ -9,7 +9,7 @@ To run as a VR experience, the Smell Engine VR directory contains an example Uni
 In the root directory, run: ```pip install requirements.txt```
 
 ## Documentation:
-Documentation for the framework can be found in [here](https://asu-meteor.github.io/The-Smell-Engine/html/index.html)
+Documentation for the framework can be found [here](https://asu-meteor.github.io/The-Smell-Engine/html/index.html)
 
 ## Presentations:
 The Smell Engine: A system for artificial odor synthesis in virtual environments (March, 2022) </br>
