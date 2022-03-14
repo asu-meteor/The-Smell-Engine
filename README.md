@@ -9,7 +9,7 @@ To run as a VR experience, the Smell Engine VR directory contains an example Uni
 In the root directory, run: ```pip install requirements.txt```
 
 ## Documentation:
-Documentation for the framework can be found in [insert hosted link]()
+Documentation for the framework can be found in [here](https://asu-meteor.github.io/The-Smell-Engine/html/index.html)
 
 ## Presentations:
 The Smell Engine: A system for artificial odor synthesis in virtual environments (March, 2022) </br>
