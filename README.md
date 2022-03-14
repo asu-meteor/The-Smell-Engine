@@ -45,7 +45,7 @@ Then, run the Unity scene. Unity will transmit the odorant PubChemIDs, intitiali
 To design a virtual olfactory space, simply assign a Odor Source component and specify it's PubChemID as follows:
 
 <p float="left">
-    <img src="https://i.imgur.com/fNdxvch.gif" width="350" height="219"/>    
+    <img src="https://i.imgur.com/wkRPxHq.gif" width="350" height="219"/>    
     <!-- <img src="https://i.imgur.com/rZBlSLV.gif" width="350" height="219"/>     -->
 </p>
 
