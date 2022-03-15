@@ -113,7 +113,7 @@ The Valve Driver component issues multiplexed digital and analog signals that co
 We implemented our Valve Driver component using NIDAQmx SDK, which is included as a sub-directory for this repository.
 
 <p float="left">
-    <img src="https://i.imgur.com/RfQOkDW.png" width="350" height="312"/>    
+    <img src="https://i.imgur.com/t696Efd.jpg" width="350" height="312"/>    
 </p>
 
 ---
