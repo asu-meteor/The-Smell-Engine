@@ -1,3 +1,5 @@
+# The Smell Engine
+
 [**Project Page**](https://meteor.ame.asu.edu/projects/smell-engine/)  |  [**Video**](https://www.youtube.com/watch?v=vV36-LQbsOU)  | [**Paper**](https://meteor.ame.asu.edu/publications/SmellEngineIEEEVRR22.pdf)
 
 [The Smell Engine: A system for artificial odor synthesis in virtual environments](https://meteor.ame.asu.edu/projects/smell-engine/)  
@@ -12,7 +14,7 @@
  <sup>1</sup>Arizona State University
 in IEEE VR 2022 (Oral Presentation)
 
-# Smell Engine
+## What is the Smell Engine?
 The Smell Engine is a system for designing virtual odor-infused environments and generating olfactory stimuli within the virtual environment by controlling an olfactory display. More info can be found [here](https://meteor.ame.asu.edu/projects/smell-engine/)
 
 This system can be run as a CLI or Virtual Reality (VR) experience. 
