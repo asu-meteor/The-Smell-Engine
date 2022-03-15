@@ -1,3 +1,17 @@
+[**Project Page**](https://meteor.ame.asu.edu/projects/smell-engine/)  |  [**Video**](https://www.youtube.com/watch?v=vV36-LQbsOU)  | [**Paper**](https://meteor.ame.asu.edu/publications/SmellEngineIEEEVRR22.pdf)
+
+[The Smell Engine: A system for artificial odor synthesis in virtual environments](https://meteor.ame.asu.edu/projects/smell-engine/)  
+ [Alireza Bahremand](https://www.alirezabahremand.com/)\*<sup>1</sup>,
+ [Mason Manetta](https://mcmanetta.github.io)\*<sup>1</sup>,
+ [Jessica Lai](https://github.com/jmklai)\*<sup>1</sup>,
+ [Byron Lahey](https://herbergerinstitute.asu.edu/profile/byron-lahey)\*<sup>1</sup>,
+ [Christy Spackman](http://www.christyspackman.com/)\*<sup>1</sup>,
+ [Brian H. Smith](https://isearch.asu.edu/profile/843330)\*<sup>1</sup>,
+ [Richard C. Gerkin](https://rick.gerk.in/about/)\*<sup>1</sup>,
+ [Robert LiKamWa](https://meteor.ame.asu.edu/)\*<sup>1</sup><br>
+ <sup>1</sup>Arizona State University
+in IEEE VR 2022 (Oral Presentation)
+
 # Smell Engine
 The Smell Engine is a system for designing virtual odor-infused environments and generating olfactory stimuli within the virtual environment by controlling an olfactory display. More info can be found [here](https://meteor.ame.asu.edu/projects/smell-engine/)
 
@@ -111,24 +125,17 @@ We implemented our Valve Driver component using NIDAQmx SDK, which is included a
 * Serial communication support.
 * Odorant Molecule name parameter. Currently, Odor Source configuration requires the PubChemID. The code is implemented for this feature, and is currently under testing.
 
-# Authors
+## Citation
 
-**Alireza Bahremand**
+```
+@inproceedings{alireza2022_SmellEngine,
+  title={The Smell Engine: A system for artificial odor synthesis in virtual environments},
+  author={Alireza Bahremand and Mason Manetta and Jessica Lai and Byron Lahey and Christy Spackman and Brian H. Smith and Richard C. Gerkin and Robert LiKamWa},
+  booktitle={2022 IEEE Virtual Reality and 3D User Interfaces (VR)},
+  year={2022}
+}
+```
 
-* [Website/Alireza Bahremand](https://www.alirezabahremand.com/)
-* [twitter/lirezaBahremand](https://twitter.com/lirezabahremand)
-
-**Mason Manetta**
-* [Website/Mason Manetta](https://mcmanetta.github.io)
-
-**Jessica Lai**
-* [Website/Jessica Lai](https://github.com/jmklai)
-
-**Richard C Gerkin**
-* [Website/Rick Gerkin](https://rick.gerk.in/about/)
-
-**Robert LiKamWa**
-* [Website/Robert LiKamWa](http://roblkw.com/resume.php)
 ## License
 <!-- Released under the [MIT license](LICENSE). -->
 
