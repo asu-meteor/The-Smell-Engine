@@ -87,7 +87,7 @@ The Odor Source Component lets developers specify
 a feature vector of odorant-specific concentrations and dispersion constants to configure odor "flavor", "strength", and propagation of each odor source.
 
 <p float="left">
-    <img src="https://i.imgur.com/mdXYW7V.png" width="350" height="225"/>    
+    <img src="https://i.imgur.com/WGpZD15.jpg" width="350" height="225"/>    
 </p>
 
 ---
@@ -102,7 +102,7 @@ The Smell Controller coordinates a hardware olfactometer to physically present a
 Currently, developers can pre-compute the Olfactometer hardware states for a virtual odor space configuration, or perform calculations on-the-fly using a series of linear and non-linear solvers.
 
 <p float="left">
-    <img src="https://i.imgur.com/KawLbeV.png" width="350" height="84"/>    
+    <img src="https://i.imgur.com/MIQITv6.jpg" width="350" height="84"/>    
 </p>
 
 ---
