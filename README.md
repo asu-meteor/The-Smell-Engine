@@ -3,14 +3,14 @@
 [**Project Page**](https://meteor.ame.asu.edu/projects/smell-engine/)  |  [**Video**](https://www.youtube.com/watch?v=vV36-LQbsOU)  | [**Paper**](https://meteor.ame.asu.edu/publications/SmellEngineIEEEVRR22.pdf)
 
 [The Smell Engine: A system for artificial odor synthesis in virtual environments](https://meteor.ame.asu.edu/projects/smell-engine/)  
- [Alireza Bahremand](https://www.alirezabahremand.com/)\*<sup>1</sup>,
- [Mason Manetta](https://mcmanetta.github.io)\*<sup>1</sup>,
- [Jessica Lai](https://github.com/jmklai)\*<sup>1</sup>,
- [Byron Lahey](https://herbergerinstitute.asu.edu/profile/byron-lahey)\*<sup>1</sup>,
- [Christy Spackman](http://www.christyspackman.com/)\*<sup>1</sup>,
- [Brian H. Smith](https://isearch.asu.edu/profile/843330)\*<sup>1</sup>,
- [Richard C. Gerkin](https://rick.gerk.in/about/)\*<sup>1</sup>,
- [Robert LiKamWa](https://meteor.ame.asu.edu/)\*<sup>1</sup><br>
+ [Alireza Bahremand](https://www.alirezabahremand.com/)<sup>1</sup>,
+ [Mason Manetta](https://mcmanetta.github.io)<sup>1</sup>,
+ [Jessica Lai](https://github.com/jmklai)<sup>1</sup>,
+ [Byron Lahey](https://herbergerinstitute.asu.edu/profile/byron-lahey)<sup>1</sup>,
+ [Christy Spackman](http://www.christyspackman.com/)<sup>1</sup>,
+ [Brian H. Smith](https://isearch.asu.edu/profile/843330)<sup>1</sup>,
+ [Richard C. Gerkin](https://rick.gerk.in/about/)<sup>1</sup>,
+ [Robert LiKamWa](https://meteor.ame.asu.edu/)<sup>1</sup><br>
  <sup>1</sup>Arizona State University
 in IEEE VR 2022 (Oral Presentation)
 
