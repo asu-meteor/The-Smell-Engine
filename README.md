@@ -86,9 +86,9 @@ The Smell Engine achieves this using design-time operations and runtime operatio
 The Odor Source Component lets developers specify
 a feature vector of odorant-specific concentrations and dispersion constants to configure odor "flavor", "strength", and propagation of each odor source.
 
-<p float="left">
+<!-- <p float="left">
     <img src="https://i.imgur.com/WGpZD15.jpg" width="350" height="225"/>    
-</p>
+</p> -->
 
 ---
 ### Smell Mixer Component
